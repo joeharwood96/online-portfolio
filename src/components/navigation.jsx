@@ -30,19 +30,14 @@ export default function Navigation(props) {
     `;
 
     const NavTitle = styled.h2`
-        font-size: 3em;
-        margin: 0;
+        font-size: 2em;
         padding: 1rem;
+        margin-top: 0.75rem;
         margin-left: 10rem;
         color: ${props.colorScheme.secondary};
 
         @media(max-width: 1408px) {
             margin-left: 1rem;
-        }
-
-        @media(max-width: 902px) {
-            font-size: 2em;
-            margin-top: 0.5rem;
         }
 
         @media(max-width: 660px) {
@@ -59,6 +54,12 @@ export default function Navigation(props) {
             font-size: 0.9em;
             margin-top: 1.5rem;
         }
+
+        @media(max-width: 375px) {
+            font-size: 0.75em;
+            margin-top: 1.75rem;
+        }
+
     `;
 
     const LinkWrapper = styled.section`
@@ -85,9 +86,9 @@ export default function Navigation(props) {
     const [windowWidth, ] = useWindowSize();
     return (
         <NavWrapper>
-            <NavTitle>Joe Harwood <span style={{color: colorScheme.primary}}>/ Software Engineer</span></NavTitle>
+            <NavTitle>Joe Harwood <span style={{color: colorScheme.primary}}>| Software Engineer</span></NavTitle>
             {
-                windowWidth < 1120 ?
+                windowWidth < 880 ?
                 <MenuButton>MENU</MenuButton>
                 :
                 <LinkWrapper>
@@ -97,7 +98,12 @@ export default function Navigation(props) {
                     <Link color="inherit" href="/about-me" style={{marginLeft: '1rem'}}>
                         About Me
                     </Link>
-                    <Link color="inherit" href="https://drive.google.com/file/d/12XBR7IokX0VPABrBL0G2CSUovcd4LtuT/view" style={{marginLeft: '1rem'}}>
+                    <Link 
+                        color="inherit" 
+                        href="https://drive.google.com/file/d/12XBR7IokX0VPABrBL0G2CSUovcd4LtuT/view" 
+                        style={{marginLeft: '1rem'}}
+                        target='_blank'
+                    >
                         Resume
                     </Link>
                 </LinkWrapper>

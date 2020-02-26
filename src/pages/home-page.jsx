@@ -18,7 +18,7 @@ export default function HomePage(props) {
 
     return (
         <HomePageWrapper>
-            <Title>PORTFOLIO</Title>
+            <Title></Title>
         </HomePageWrapper>
     );
 }
