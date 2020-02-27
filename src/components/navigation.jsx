@@ -27,6 +27,7 @@ export default function Navigation(props) {
         justify-content: space-between;
         background-color: ${props.colorScheme.tertiary};
         width: 100vw;
+        height: 10vh;
     `;
 
     const NavTitle = styled.h2`
@@ -55,9 +56,14 @@ export default function Navigation(props) {
             margin-top: 1.5rem;
         }
 
+        @media(max-width: 414px) {
+            font-size: 0.9em;
+            margin-top: 0.75rem;
+        }
+
         @media(max-width: 375px) {
             font-size: 0.75em;
-            margin-top: 1.75rem;
+            margin-top: 1rem;
         }
 
     `;
@@ -81,6 +87,19 @@ export default function Navigation(props) {
         padding: 0.5em 0.5em;
         border: 2px solid ${colorScheme.primary};
         border-radius: 3px;
+
+        &:hover {
+            background-color: ${props.colorScheme.tertiary};
+            cursor: pointer;
+        }
+
+        @media(max-width: 414px) {
+            margin-top: 0.75rem;
+        }
+
+        @media(max-width: 375px) {
+            margin-top: 1rem;
+        }
     `;
 
     const [windowWidth, ] = useWindowSize();
