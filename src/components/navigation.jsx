@@ -1,33 +1,29 @@
-import React, {useState, useLayoutEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 // MUI
 import Link from '@material-ui/core/Link';
+import CloseIcon from '@material-ui/icons/Close';
+import MenuIcon from '@material-ui/icons/Menu';
 
-function useWindowSize() {
-    const [size, setSize] = useState([0, 0]);
-    useLayoutEffect(() => {
-        function updateSize() {
-            setSize([window.innerWidth, window.innerHeight]);
-        }
-        window.addEventListener('resize', updateSize);
-        updateSize();
-        return () => window.removeEventListener('resize', updateSize);
-    }, []);
-    return size;
-}
+// Utils
+import useWindowSize from '../utils/useWindowSize';
 
 export default function Navigation(props) {
     const {
-        colorScheme 
+        colorScheme,
+        setShowMenu,
+        showMenu
     } = props;
+
+    const [windowWidth, ] = useWindowSize();
 
     const NavWrapper = styled.section`
         display: flex;
         justify-content: space-between;
-        background-color: ${props.colorScheme.tertiary};
+        background-color: ${showMenu && windowWidth < 880 ? 'white' : colorScheme.tertiary};
         width: 100vw;
-        height: 10vh;
+        height: 6rem;
     `;
 
     const NavTitle = styled.h2`
@@ -35,7 +31,7 @@ export default function Navigation(props) {
         padding: 1rem;
         margin-top: 0.75rem;
         margin-left: 10rem;
-        color: ${props.colorScheme.secondary};
+        color: ${colorScheme.secondary};
 
         @media(max-width: 1408px) {
             margin-left: 1rem;
@@ -89,7 +85,7 @@ export default function Navigation(props) {
         border-radius: 3px;
 
         &:hover {
-            background-color: ${props.colorScheme.tertiary};
+            background-color: ${colorScheme.tertiary};
             cursor: pointer;
         }
 
@@ -102,13 +98,12 @@ export default function Navigation(props) {
         }
     `;
 
-    const [windowWidth, ] = useWindowSize();
     return (
         <NavWrapper>
             <NavTitle>Joe Harwood <span style={{color: colorScheme.primary}}>| Software Engineer</span></NavTitle>
             {
                 windowWidth < 880 ?
-                <MenuButton>MENU</MenuButton>
+                <MenuButton onClick={() => setShowMenu(!showMenu)}>{showMenu ? <CloseIcon />: <MenuIcon />}</MenuButton>
                 :
                 <LinkWrapper>
                     <Link color="inherit" href="/" style={{marginLeft: '1rem'}}>

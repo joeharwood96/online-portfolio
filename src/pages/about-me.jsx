@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 
-export default function HomePage(props) {
+export default function AboutMe(props) {
     const {
         colorScheme
     } = props;
@@ -12,13 +12,13 @@ export default function HomePage(props) {
         margin: 0;
     `;
 
-    const HomePageWrapper = styled.section`
+    const AboutMeWrapper = styled.section`
         width: 100%;
     `;
 
     return (
-        <HomePageWrapper>
-            <Title></Title>
-        </HomePageWrapper>
+        <AboutMeWrapper>
+            <Title>About Me</Title>
+        </AboutMeWrapper>
     );
 }
