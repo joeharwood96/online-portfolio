@@ -5,12 +5,12 @@ import styled from 'styled-components';
 import Link from '@material-ui/core/Link';
 
 
-const MenuOptions = ['Projects', 'About Me', 'Resume']
+const MenuOptions = ['Projects', 'About Me', 'Resume'];
 const MenuLink = {
     'Projects':'/',
     'About Me':'/about-me',
     'Resume':'https://drive.google.com/file/d/12XBR7IokX0VPABrBL0G2CSUovcd4LtuT/view'
-}
+};
 
 export default function Menu(props) {
 
@@ -45,7 +45,8 @@ export default function Menu(props) {
                         <MenuOption>
                             <Link
                                 href={MenuLink[option]}
-                                color="inherit"
+                                color={'inherit'}
+                                style={{color: MenuLink[option] === window.location.pathname ? '#FCB03A' : null}}
                                 target={option === 'Resume' ? '_blank' : null}
                             >
                                 {option}

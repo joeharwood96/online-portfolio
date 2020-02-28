@@ -16,6 +16,13 @@ export default function Navigation(props) {
         showMenu
     } = props;
 
+    const NavOptions = ['Projects', 'About Me', 'Resume'];
+    const NavLink = {
+        'Projects':'/',
+        'About Me':'/about-me',
+        'Resume':'https://drive.google.com/file/d/12XBR7IokX0VPABrBL0G2CSUovcd4LtuT/view'
+    }
+
     const [windowWidth, ] = useWindowSize();
 
     const NavWrapper = styled.section`
@@ -65,12 +72,12 @@ export default function Navigation(props) {
     `;
 
     const LinkWrapper = styled.section`
-        color: ${colorScheme.primary};
-        padding: 2.5rem;
+        padding-top: 1.25rem;
         margin-right: 10rem;
+        display: flex;
 
         @media(max-width: 1408px) {
-            margin-right: 1rem;
+            margin-right: 2rem;
         }
     `;
 
@@ -98,6 +105,18 @@ export default function Navigation(props) {
         }
     `;
 
+    const NavOption = styled.h3`
+        color: ${colorScheme.primary};
+        margin-left: 1rem;
+        
+        &:hover {
+            cursor: pointer;
+            color: ${colorScheme.secondary};
+        }
+    `;
+
+    console.log(colorScheme.secondary);
+
     return (
         <NavWrapper>
             <NavTitle>Joe Harwood <span style={{color: colorScheme.primary}}>| Software Engineer</span></NavTitle>
@@ -106,20 +125,22 @@ export default function Navigation(props) {
                 <MenuButton onClick={() => setShowMenu(!showMenu)}>{showMenu ? <CloseIcon />: <MenuIcon />}</MenuButton>
                 :
                 <LinkWrapper>
-                    <Link color="inherit" href="/" style={{marginLeft: '1rem'}}>
-                        Projects
-                    </Link>
-                    <Link color="inherit" href="/about-me" style={{marginLeft: '1rem'}}>
-                        About Me
-                    </Link>
-                    <Link 
-                        color="inherit" 
-                        href="https://drive.google.com/file/d/12XBR7IokX0VPABrBL0G2CSUovcd4LtuT/view" 
-                        style={{marginLeft: '1rem'}}
-                        target='_blank'
-                    >
-                        Resume
-                    </Link>
+                    {
+                        NavOptions.map(option => {
+                            return (
+                                <NavOption>
+                                    <Link
+                                        href={NavLink[option]}
+                                        color={'inherit'}
+                                        style={{color: NavLink[option] === window.location.pathname ? '#FCB03A' : null}}
+                                        target={option === 'Resume' ? '_blank' : null}
+                                    >
+                                        {option}
+                                    </Link>
+                                </NavOption>
+                            )
+                        })
+                    }
                 </LinkWrapper>
             }
         </NavWrapper>
