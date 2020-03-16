@@ -16,16 +16,17 @@ export default function Navigation(props) {
         showMenu
     } = props;
 
-    const NavOptions = ['Projects', 'About Me', 'Resume'];
+    const NavOptions = ['Projects', 'Resume'];
     const NavLink = {
         'Projects':'/',
-        'About Me':'/about-me',
         'Resume':'https://drive.google.com/file/d/12XBR7IokX0VPABrBL0G2CSUovcd4LtuT/view'
     }
 
     const [windowWidth, ] = useWindowSize();
 
     const NavWrapper = styled.section`
+        position: fixed;
+        top: 0;
         display: flex;
         justify-content: space-between;
         background-color: ${showMenu && windowWidth < 880 ? 'white' : colorScheme.tertiary};
@@ -82,13 +83,12 @@ export default function Navigation(props) {
     `;
 
     const MenuButton = styled.button`
-        color: ${colorScheme.primary};
         font-size: 1em;
         height: 3em;
         width: 4em;
         margin: 1.5em;
         padding: 0.5em 0.5em;
-        border: 2px solid ${colorScheme.primary};
+        border: 2px solid;
         border-radius: 3px;
 
         &:hover {
@@ -106,16 +106,14 @@ export default function Navigation(props) {
     `;
 
     const NavOption = styled.h3`
-        color: ${colorScheme.primary};
         margin-left: 1rem;
+        font-weight: 400;
         
         &:hover {
             cursor: pointer;
             color: ${colorScheme.secondary};
         }
     `;
-
-    console.log(colorScheme.secondary);
 
     return (
         <NavWrapper>
@@ -132,7 +130,7 @@ export default function Navigation(props) {
                                     <Link
                                         href={NavLink[option]}
                                         color={'inherit'}
-                                        style={{color: NavLink[option] === window.location.pathname ? '#FCB03A' : null}}
+                                        style={{color: NavLink[option] === window.location.pathname ? colorScheme.secondary : colorScheme.primary}}
                                         target={option === 'Resume' ? '_blank' : null}
                                     >
                                         {option}

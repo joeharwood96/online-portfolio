@@ -46,7 +46,7 @@ export default function Menu(props) {
                             <Link
                                 href={MenuLink[option]}
                                 color={'inherit'}
-                                style={{color: MenuLink[option] === window.location.pathname ? '#FCB03A' : null}}
+                                style={{color: MenuLink[option] === window.location.pathname ? colorScheme.secondary : null}}
                                 target={option === 'Resume' ? '_blank' : null}
                             >
                                 {option}
