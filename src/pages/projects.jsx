@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
 // Components 
@@ -235,6 +235,10 @@ export default function Projects(props) {
         flex-wrap: wrap;
         justify-content: center;
     `;
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
 
     return (
         <ProjectsPageWrapper>

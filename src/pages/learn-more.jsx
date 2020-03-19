@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import {
     useParams
@@ -152,6 +152,10 @@ export default function LearnMore(props) {
         flex-wrap: wrap;
         justify-content: center;
     `;
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
 
     return (
         <LearnMoreWrapper>
