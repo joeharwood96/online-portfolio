@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.dff52559.chunk.css",
-    "main.js": "/static/js/main.a355d19f.chunk.js",
-    "main.js.map": "/static/js/main.a355d19f.chunk.js.map",
+    "main.js": "/static/js/main.28e273d0.chunk.js",
+    "main.js.map": "/static/js/main.28e273d0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.cd8be92d.js",
     "runtime-main.js.map": "/static/js/runtime-main.cd8be92d.js.map",
-    "static/js/2.1148f472.chunk.js": "/static/js/2.1148f472.chunk.js",
-    "static/js/2.1148f472.chunk.js.map": "/static/js/2.1148f472.chunk.js.map",
+    "static/js/2.c50dcb71.chunk.js": "/static/js/2.c50dcb71.chunk.js",
+    "static/js/2.c50dcb71.chunk.js.map": "/static/js/2.c50dcb71.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.25a35370f2ac140856a1e5a7753e0482.js": "/precache-manifest.25a35370f2ac140856a1e5a7753e0482.js",
+    "precache-manifest.52a1e7a12da70f91d74a2700c9265925.js": "/precache-manifest.52a1e7a12da70f91d74a2700c9265925.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.dff52559.chunk.css.map": "/static/css/main.dff52559.chunk.css.map",
-    "static/js/2.1148f472.chunk.js.LICENSE.txt": "/static/js/2.1148f472.chunk.js.LICENSE.txt",
+    "static/js/2.c50dcb71.chunk.js.LICENSE.txt": "/static/js/2.c50dcb71.chunk.js.LICENSE.txt",
     "static/media/TourDeManc.png": "/static/media/TourDeManc.cb7152ff.png",
     "static/media/crown-clothing.png": "/static/media/crown-clothing.ca6db455.png",
     "static/media/crownLogo.svg": "/static/media/crownLogo.bd54ccd4.svg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.cd8be92d.js",
-    "static/js/2.1148f472.chunk.js",
+    "static/js/2.c50dcb71.chunk.js",
     "static/css/main.dff52559.chunk.css",
-    "static/js/main.a355d19f.chunk.js"
+    "static/js/main.28e273d0.chunk.js"
   ]
 }
