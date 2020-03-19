@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+    useParams
+} from "react-router-dom";
 
 // Images
 import crownClothing from '../assets/crown-clothing.png';
@@ -51,8 +54,7 @@ const ProjectData = {
 
 export default function LearnMore(props) {
     const { colorScheme } = props;
-    const searchParams = new URLSearchParams(window.location.search);
-    const id = searchParams.get('id') || '';
+    const { id } = useParams();
     const project = ProjectData[id];
 
     const LearnMoreWrapper = styled.section`
@@ -161,7 +163,6 @@ export default function LearnMore(props) {
                 <ListTitle>Technologies:</ListTitle>
                 {
                     project.tech.map(tech => {
-                        console.log(tech);
                         return <ListItem>{tech}</ListItem>
                     })
                 }

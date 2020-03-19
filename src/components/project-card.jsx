@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 // MUI 
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -90,7 +91,7 @@ export default function ProjectCard(props) {
                     {project.title}
                 </ProjectTitle>
                 <ButtonsWrapper>
-                    <Button href={`/learn-more?id=${project.id}`} style={{textDecoration: 'none', color: 'white'}}>Learn More</Button>
+                    <Button><Link to={`/learn-more/${project.id}`} style={{textDecoration: 'none', color: 'white'}}>Learn More</Link></Button>
                     {
                         project.github ? 
                         <GitHub href={project.github} target={'_blank'}><GitHubIcon /></GitHub>

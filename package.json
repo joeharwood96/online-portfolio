@@ -2,7 +2,7 @@
   "name": "online-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.joeharwood.co.uk/",
+  "homepage": "http://www.joeharwood.co.uk",
   "dependencies": {
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^4.9.1",
