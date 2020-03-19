@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dff52559.chunk.css",
+    "main.js": "/static/js/main.f4802c3b.chunk.js",
+    "main.js.map": "/static/js/main.f4802c3b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.cd8be92d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.cd8be92d.js.map",
+    "static/js/2.09637549.chunk.js": "/static/js/2.09637549.chunk.js",
+    "static/js/2.09637549.chunk.js.map": "/static/js/2.09637549.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2393904cb223c20a11cc796e5c0e0d27.js": "/precache-manifest.2393904cb223c20a11cc796e5c0e0d27.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.dff52559.chunk.css.map": "/static/css/main.dff52559.chunk.css.map",
+    "static/js/2.09637549.chunk.js.LICENSE.txt": "/static/js/2.09637549.chunk.js.LICENSE.txt",
+    "static/media/crownLogo.svg": "/static/media/crownLogo.bd54ccd4.svg",
+    "static/media/tourdemancLogo.png": "/static/media/tourdemancLogo.b99ab005.png",
+    "static/media/vehicleLogo.svg": "/static/media/vehicleLogo.04a4b05a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd8be92d.js",
+    "static/js/2.09637549.chunk.js",
+    "static/css/main.dff52559.chunk.css",
+    "static/js/main.f4802c3b.chunk.js"
+  ]
+}
