@@ -45,10 +45,10 @@ function App() {
         <Menu colorScheme={colorScheme}/>
         :
         <Switch>
-          <Route exact path="/">
+          <Route exact path={process.env.PUBLIC_URL + "/"}>
               <Projects colorScheme={colorScheme}/>
           </Route>
-          <Route path="/learn-more">
+          <Route path={process.env.PUBLIC_URL + "/learn-more"}>
               <LearnMore colorScheme={colorScheme}/>
           </Route>
         </Switch>
