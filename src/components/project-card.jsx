@@ -44,9 +44,8 @@ export default function ProjectCard(props) {
         color: white;
     `;
 
-    const Button = styled.button`
+    const Button = styled.a`
         font-size: 1em;
-        width: 8rem;
         padding: 0.5em 0.5em;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
@@ -91,7 +90,7 @@ export default function ProjectCard(props) {
                     {project.title}
                 </ProjectTitle>
                 <ButtonsWrapper>
-                    <Button>Case Study</Button>
+                    <Button href={`/learn-more?id=${project.id}`} style={{textDecoration: 'none', color: 'white'}}>Learn More</Button>
                     {
                         project.github ? 
                         <GitHub href={project.github} target={'_blank'}><GitHubIcon /></GitHub>

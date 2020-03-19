@@ -7,6 +7,7 @@ import styled from 'styled-components';
 
 // Pages
 import Projects from './pages/projects';
+import LearnMore from './pages/learn-more';
 
 // Components
 import Navigation from './components/navigation';
@@ -46,6 +47,9 @@ function App() {
         <Switch>
           <Route exact path="/">
               <Projects colorScheme={colorScheme}/>
+          </Route>
+          <Route path="/learn-more">
+              <LearnMore colorScheme={colorScheme}/>
           </Route>
         </Switch>
       }

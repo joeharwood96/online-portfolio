@@ -19,6 +19,7 @@ import VehicleDatabase from '../assets/vehicleLogo.svg';
 
 const ProjectData = [
     {
+        id: 'eph',
         image: EPH,
         title: 'Early Professionals Hub',
         info: 'Project manager for a web application that allows users to create performance' + 
@@ -26,12 +27,14 @@ const ProjectData = [
         github: null
     },
     {
+        id: 'crownClothing',
         image: crownClothing,
         title: 'Crown Clothing',
         info: 'A mock retial site which allows users to browse clothing items, add to cart and provide card payments through stripe. (React, Node.js, Firebase)',
         github: 'https://github.com/joeharwood96/crown-clothing'
     },
     {
+        id: 'tourDeManc',
         image: TourDeManc,
         title: 'Tour De Manc',
         info: 'A web application for a real-world client that allowed photographers to upload' + 
@@ -39,6 +42,7 @@ const ProjectData = [
         github: 'https://github.com/joeharwood96/Tour-De-Manc'
     },
     {
+        id: 'vehicleDatabase',
         image: VehicleDatabase,
         title: 'Vehicle Database',
         info: 'A Web and Android Application used to store and visualise data about vehicles which' + 
