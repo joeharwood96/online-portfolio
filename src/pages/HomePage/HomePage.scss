@@ -1,0 +1,107 @@
+.home-page {
+    padding: 1rem;
+    text-align: center;
+    margin: auto;
+    width: 80%; 
+
+    &-info {
+        height: calc(100vh - 2rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    &-icon:hover {
+        fill: gray;
+    }
+    
+    &-image {
+        height: 200px;
+        border-radius: 100px;
+        filter: grayscale(100%);
+    }
+
+    &-projects {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        margin-bottom: 1rem;
+
+        &-card {
+            padding: 1rem;
+            margin: 0.5rem;
+            text-align: left;
+            background-color: rgba(128, 128, 128, 0.685); 
+            border-radius: 0.5rem;
+            height: 300px;
+            background-color: #24292e;
+
+            &:hover {
+                transition: all 0.2s ease-out;
+                box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+                margin-top: -10px;
+            }
+
+            &-header {
+                display: flex;
+                justify-content: space-between;
+
+                &-links {
+                    display: flex;
+                }
+
+                &-link {
+                    svg:hover {
+                        color: rgb(43, 43, 231);
+                    }
+                }
+            }
+            
+
+            &-title {
+                color: rgba(172, 172, 172, 0.767);
+
+                :hover > & {
+                    color: white;
+                }
+            }
+
+            &-text {
+                color: rgba(172, 172, 172, 0.767);
+            }
+
+            &-tech {
+                color: rgba(172, 172, 172, 0.767);
+                font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+                :hover > & {
+                    color: white;
+                }
+            }
+
+            &-button {
+                background-color: transparent;
+                color: white;
+                border: 1px solid white;
+                padding: 0.5rem 0.75rem;
+
+                &:hover {
+                    cursor: pointer;
+                    color: rgb(43, 43, 231);
+                    border: 1px solid rgb(43, 43, 231);
+                }
+            }
+        }
+
+    }
+}
+
+
+.react-pdf__Page__canvas {
+    display: inline-block !important;
+    width: auto !important;
+}
+    

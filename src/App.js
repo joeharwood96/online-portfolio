@@ -1,62 +1,35 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   Switch,
   Route
 } from "react-router-dom";
-import styled from 'styled-components';
 
-// Pages
-import Projects from './pages/projects';
-import LearnMore from './pages/learn-more';
+// Pages 
+import HomePage from './pages/HomePage/HomePage';
+import ResumePage from './pages/ResumePage/ResumePage';
 
 // Components
-import Navigation from './components/navigation';
-import Menu from './components/menu';
-import Footer from './components/footer';
-
-// Utils
-import useWindowSize from './utils/useWindowSize';
-
-const colorScheme = {
-  primary: '#2c3e50',
-  secondary: '#e74c3c',
-  tertiary: '#f5f5f5'
-}
+import Links from './components/Links/Links';
 
 function App() {
-  const [showMenu, setShowMenu] = useState(false);
-  const [windowWidth, ] = useWindowSize(setShowMenu);
-
-  const AppWrapper = styled.section`
-    margin-top: 6rem;
-    width: 100vw;
-  `;
-
+  
   return (
     <div className="App">
-      <Navigation 
-        colorScheme={colorScheme} 
-        setShowMenu={setShowMenu}
-        showMenu={showMenu}
-      />
-      <AppWrapper>
       {
-        showMenu && windowWidth < 880 ? 
-        <Menu colorScheme={colorScheme}/>
+        window.location.pathname === '/resume' ?
+        null
         :
-        <Switch>
-          <Route exact path={process.env.PUBLIC_URL + "/"}>
-              <Projects colorScheme={colorScheme}/>
-          </Route>
-          <Route path={process.env.PUBLIC_URL + "/learn-more"}>
-              <LearnMore colorScheme={colorScheme}/>
-          </Route>
-        </Switch>
+        <Links />
       }
-      <Footer 
-        colorScheme={colorScheme} 
-      />
-      </AppWrapper>
+      <Switch>
+        <Route path='/' exact>
+          <HomePage />
+        </Route>
+        <Route path='/resume'>
+          <ResumePage />
+        </Route>
+      </Switch>
+      
     </div>
   );
 }
